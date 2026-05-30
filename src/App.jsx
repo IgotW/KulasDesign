@@ -10,7 +10,7 @@ import tarpaulin from './assets/categories/tarpaulin.png'
 import apparel from './assets/services/apparel.jpg'
 import banner from './assets/services/banner.jpg'
 import decals from './assets/services/decals.jpg'
-import landyards from './assets/services/landyard.jpg'
+import landyards from './assets/services/lanyard.jpg'
 import medals from './assets/services/medal.jpg'
 import plaques from './assets/services/plaques.jpg'
 import sash from './assets/services/sash.jpg'
@@ -24,47 +24,47 @@ function App() {
     {
       name: 'Apparel',
       row: 'top',
-      image: {apparel},
+      image: apparel,
     },
     {
       name: 'Signages',
       row: 'top',
-      image: {signages},
+      image: signages,
     },
     {
       name: 'Plaques',
       row: 'top',
-      image: {plaques},
+      image: plaques,
     },
     {
       name: 'Lanyard',
       row: 'top',
-      image: {landyards},
+      image: landyards,
     },
     {
       name: 'Medals',
       row: 'top',
-      image: {medals},
+      image: medals,
     },
     {
       name: 'Decals',
       row: 'bottom',
-      image: {decals},
+      image: decals,
     },
     {
       name: 'Tent',
       row: 'bottom',
-      image: {tent},
+      image: tent,
     },
     {
       name: 'Sash',
       row: 'bottom',
-      image: {sash},
+      image: sash,
     },
     {
       name: 'Banner',
       row: 'bottom',
-      image: {banner},
+      image: banner,
     },
   ]
 
@@ -369,7 +369,7 @@ const processSteps = [
       </article>
 
       <article className="bento-card">
-        <img src={landyard} alt="Lanyards" className="bento-img" />
+        <img src={lanyard} alt="Lanyards" className="bento-img" />
         <div className="bento-overlay" />
         <div className="bento-text">
           <span className="bento-tag">Corporate</span>

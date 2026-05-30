@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './Navbar.css'
-import kdLogo from './assets/kd_logo.png'
+import kdLogo from '../assets/kd_logo.png'
 
 const defaultLinks = [
   { href: '#services', label: 'Services' },
