@@ -1,0 +1,244 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 4rem;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, border-color 0.3s ease, padding 0.3s ease;
+}
+
+.topbar-scrolled {
+  background: rgba(4, 7, 12, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #162e36;
+  padding: 0.65rem 4rem;
+}
+
+/* ── Brand ── */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+}
+
+.brand-logo {
+  height: 2.4rem;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px rgba(31, 211, 222, 0.3));
+}
+
+.brand-text-wrap {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.brand-name {
+  font-family: var(--heading);
+  font-size: 0.88rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #f4feff;
+}
+
+.brand-sub {
+  font-family: var(--heading);
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #1fd3de;
+}
+
+/* ── Desktop Nav ── */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-link {
+  color: #aec8cd;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: var(--heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.45rem 0.85rem;
+  position: relative;
+  transition: color 0.2s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0.85rem;
+  right: 0.85rem;
+  height: 1px;
+  background: #1fd3de;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #f4feff;
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.75rem;
+  text-decoration: none;
+  color: #031014;
+  background: linear-gradient(90deg, #1fd3de, #15a7bc);
+  padding: 0.5rem 1.1rem;
+  font-family: var(--heading);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: opacity 0.2s;
+  white-space: nowrap;
+}
+
+.nav-cta:hover {
+  opacity: 0.88;
+}
+
+/* ── Burger ── */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10001;
+}
+
+.burger span {
+  display: block;
+  height: 2px;
+  background: #d8e7ea;
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+  transform-origin: center;
+}
+
+.burger span:nth-child(2) {
+  width: 70%;
+  align-self: flex-end;
+}
+
+.burger-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burger-open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.burger-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile Menu ── */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(4, 7, 12, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-link {
+  color: #aec8cd;
+  text-decoration: none;
+  font-family: var(--heading);
+  font-size: clamp(1.4rem, 5vw, 2rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s;
+}
+
+.mobile-link:hover {
+  color: #1fd3de;
+}
+
+.mobile-cta {
+  display: inline-flex;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  color: #031014;
+  background: linear-gradient(90deg, #1fd3de, #15a7bc);
+  padding: 0.75rem 2rem;
+  font-family: var(--heading);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .topbar {
+    padding: 0.9rem 2rem;
+  }
+
+  .topbar-scrolled {
+    padding: 0.65rem 2rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+}
