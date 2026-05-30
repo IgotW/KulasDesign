@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './Navbar.css'
+import kdLogo from './assets/kd_logo.png'
 
 const defaultLinks = [
   { href: '#services', label: 'Services' },
@@ -23,7 +24,7 @@ function Navbar({ links = defaultLinks }) {
   return (
     <header className={`topbar${scrolled ? ' topbar-scrolled' : ''}`}>
       <a href="#" className="brand">
-        <img src="/src/assets/kd_logo.png" alt="Kulas Design" className="brand-logo" />
+        <img src={kdLogo} alt="Kulas Design" className="brand-logo" />
         <div className="brand-text-wrap">
           <span className="brand-name">Kulas Design</span>
           <span className="brand-sub">Inc.</span>

@@ -1,5 +1,21 @@
 import './App.css'
 import Navbar from './components/Navbar'
+import kdLogo from './assets/kd_logo.png'
+import kdLogoApparel from './assets/kd_logo_apparel.png'
+import customApparel from './assets/categories/custom_apparel.png'
+import lanyard from './assets/categories/lanyard.png'
+import medal from './assets/categories/medal.png'
+import printCollateral from './assets/categories/print_collateral.png'
+import tarpaulin from './assets/categories/tarpaulin.png'
+import apparel from './assets/services/apparel.jpg'
+import banner from './assets/services/banner.jpg'
+import decals from './assets/services/decals.jpg'
+import landyards from './assets/services/landyard.jpg'
+import medals from './assets/services/medal.jpg'
+import plaques from './assets/services/plaques.jpg'
+import sash from './assets/services/sash.jpg'
+import signages from './assets/services/signages.jpg'
+import tent from './assets/services/tent.jpg'
 
 function App() {
   // const serviceCards = ['Vehicle Wrap', 'Signage', 'Business Kits', 'Apparel', 'Tarpaulins', 'Lanyards', 'Custom Medals', 'Print Collateral']
@@ -8,47 +24,47 @@ function App() {
     {
       name: 'Apparel',
       row: 'top',
-      image: '/src/assets/services/apparel.jpg',
+      image: {apparel},
     },
     {
       name: 'Signages',
       row: 'top',
-      image: '/src/assets/services/signages.jpg',
+      image: {signages},
     },
     {
       name: 'Plaques',
       row: 'top',
-      image: '/src/assets/services/plaques.jpg',
+      image: {plaques},
     },
     {
       name: 'Lanyard',
       row: 'top',
-      image: '/src/assets/services/lanyard.jpg',
+      image: {landyards},
     },
     {
       name: 'Medals',
       row: 'top',
-      image: '/src/assets/services/medal.jpg',
+      image: {medals},
     },
     {
       name: 'Decals',
       row: 'bottom',
-      image: '/src/assets/services/decals.jpg',
+      image: {decals},
     },
     {
       name: 'Tent',
       row: 'bottom',
-      image: '/src/assets/services/tent.jpg',
+      image: {tent},
     },
     {
       name: 'Sash',
       row: 'bottom',
-      image: '/src/assets/services/sash.jpg',
+      image: {sash},
     },
     {
       name: 'Banner',
       row: 'bottom',
-      image: '/src/assets/services/banner.jpg',
+      image: {banner},
     },
   ]
 
@@ -142,7 +158,7 @@ const processSteps = [
             </p>
           </div>
           <div className="hero-right">
-            <img src="/src/assets/kd_logo.png" alt="Kulas Design Logo" className="hero-logo" />
+            <img src={kdLogo} alt="Kulas Design Logo" className="hero-logo" />
             <p className="hero-brand-name">Kulas Design Inc.</p>
           </div>
         </div>
@@ -259,7 +275,7 @@ const processSteps = [
         <div className="difference-right">
           <div className="difference-logo-panel">
             <div className="diff-logo-block">
-              <img src="/src/assets/kd_logo.png" alt="Kulas Design Logo" className="diff-logo" />
+              <img src={kdLogo} alt="Kulas Design Logo" className="diff-logo" />
               <p className="diff-logo-label">Kulas Design Inc.</p>
             </div>
             <div className="diff-divider">
@@ -267,7 +283,7 @@ const processSteps = [
               <span className="diff-divider-red" />
             </div>
             <div className="diff-logo-block">
-              <img src="/src/assets/kd_logo_apparel.png" alt="Kulas Apparels Logo" className="diff-logo diff-logo-circle" />
+              <img src={kdLogoApparel} alt="Kulas Apparels Logo" className="diff-logo diff-logo-circle" />
             </div>
           </div>
         </div>
@@ -334,7 +350,7 @@ const processSteps = [
 
   <div className="bento-grid">
     <article className="bento-card bento-large">
-      <img src="/src/assets/categories/custom_apparel.png" alt="Custom Apparel" className="bento-img" />
+      <img src={customApparel} alt="Custom Apparel" className="bento-img" />
       <div className="bento-overlay" />
       <div className="bento-text">
         <span className="bento-tag">Featured</span>
@@ -344,7 +360,7 @@ const processSteps = [
 
     <div className="bento-small-grid">
       <article className="bento-card">
-        <img src="/src/assets/categories/tarpaulin.png" alt="Tarpaulins" className="bento-img" />
+        <img src={tarpaulin} alt="Tarpaulins" className="bento-img" />
         <div className="bento-overlay" />
         <div className="bento-text">
           <span className="bento-tag">Large Format</span>
@@ -353,7 +369,7 @@ const processSteps = [
       </article>
 
       <article className="bento-card">
-        <img src="/src/assets/categories/lanyard.png" alt="Lanyards" className="bento-img" />
+        <img src={landyard} alt="Lanyards" className="bento-img" />
         <div className="bento-overlay" />
         <div className="bento-text">
           <span className="bento-tag">Corporate</span>
@@ -362,7 +378,7 @@ const processSteps = [
       </article>
 
       <article className="bento-card">
-        <img src="/src/assets/categories/medal.png" alt="Custom Medals" className="bento-img" />
+        <img src={medal} alt="Custom Medals" className="bento-img" />
         <div className="bento-overlay" />
         <div className="bento-text">
           <span className="bento-tag">Events</span>
@@ -371,7 +387,7 @@ const processSteps = [
       </article>
 
       <article className="bento-card">
-        <img src="/src/assets/categories/print_collateral.png" alt="Print Collaterals" className="bento-img" />
+        <img src={printCollateral} alt="Print Collaterals" className="bento-img" />
         <div className="bento-overlay" />
         <div className="bento-text">
           <span className="bento-tag">Business</span>
